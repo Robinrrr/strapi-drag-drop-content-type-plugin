@@ -58,7 +58,7 @@ const SortModal = () => {
   const fetchContentType = async () => {
     try {
       const { data } = await axiosInstance.get(
-        `/content-manager/collection-types/${contentTypePath}?sort=rank:asc&locale=${locale}`
+        `/content-manager/collection-types/${contentTypePath}?page=1&pageSize=500&sort=rank:asc&locale=${locale}`
       );
       setStatus('success');
       setData(data.results);
